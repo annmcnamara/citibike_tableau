@@ -65,14 +65,24 @@ The data repository for CitiBikes is massive and quicky runs into the millions o
 
 I used curl to grab all the .zip files from the web page and unzipped them and concatenated them into one big .csv file. 
 
-Upon inspecting that file many things became apparent and so the following logic was applied to "clean" the data. 
-
-
 ```python
 !curl -O "https://s3.amazonaws.com/tripdata/2019[05-12]-citibike-tripdata.csv.zip"
 !unzip '*.zip'
 !rm *.zip
 ```
+
+Upon inspecting that file many things became apparent and so the following logic was applied to "clean" the data. 
+
+Any rider over the age of 70 was removed.  
+
+Any trip duration less than 90 seconds with the same start and stop station was removed under the assumption that riders realized something wrong with the bike and returned it immediately. 
+
+Any trip duration greater than 2 hours was removed under the assumption that people would not ride the bikes that far and it could be assumed stolen/unreturned. 
+
+This still left 20884381 rows. I used a random sample of five million point to conduct the analysis and generate the visualizations shown in the Tableau file. All Files are availalble in this repo.
+1. data_prep.ipynb - the jupyter notebook to grab and clean the data
+2. cleaned cleaned_citibike_5M.csv
+3. citibike.twbx
 
 ### Copyright
 
