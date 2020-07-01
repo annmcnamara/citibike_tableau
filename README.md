@@ -30,9 +30,9 @@ However, while the data has been regularly updated, the team has yet to implemen
 * Which bikes (by ID) are most likely due for repair or inspection in the timespan?
 * How variable is the utilization by bike ID?
 
-**Next, as a chronic over-achiever:**
+**Next...**
 
-* Dashboardsfor each phenomena were designed and shown below
+* Dashboards for each phenomena were designed and shown below
 * The dashboards should be accompanied with an analysis explaining why the phenomena may be occuring. 
 
 **City officials would also like to see one of the following visualizations:**
@@ -61,7 +61,18 @@ However, while the data has been regularly updated, the team has yet to implemen
 
 ## Notes
 ### Data Cleaning and Assumptions
+The data repository for CitiBikes is massive and quicky runs into the millions of records.  As the past 12 months of data is likely the most representative, this analysis focuses on that time frame.  However, the jupyter notebook in this repo could be easily modified to change the data request to get data for other years or juristrictions. 
 
+I used curl to grab all the .zip files from the web page and unzipped them and concatenated them into one big .csv file. 
+
+Upon inspecting that file many things became apparent and so the following logic was applied to "clean" the data. 
+
+
+```python
+!curl -O "https://s3.amazonaws.com/tripdata/2019[05-12]-citibike-tripdata.csv.zip"
+!unzip '*.zip'
+!rm *.zip
+```
 
 ### Copyright
 
