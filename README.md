@@ -14,7 +14,7 @@ However, while the data has been regularly updated, the team has yet to implemen
 
 **Design 2-5 visualizations for each discovered phenomena (4-10 total). The work is over a timespan of MAY 2019 to MAY 2020.** 
 
-**The following are some of the questions answereed for this time period.**
+**The following are some of the questions answered for this time period.**
 
 * How many trips have been recorded total during the chosen period?
 * By what percentage has total ridership grown?
