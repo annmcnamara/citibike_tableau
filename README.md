@@ -1,4 +1,5 @@
 # Tableau Homework - Citi Bike Analytics
+[TABLEAU STORY](https://public.tableau.com/profile/ann.mcnamara#!/vizhome/CitiBike_15936965715370/Analysis2019-2020)
 
 ## Background
 
@@ -58,6 +59,13 @@ However, while the data has been regularly updated, the team has yet to implemen
 ![6](Images/6.MostPopStations.png)
 ![7](Images/8.RiderDemo.png)
 
+## Key Observations
+1. There are far more Male riders than Female Riders
+2. Riders that declined to provide Gender, also likely gave a bogus year of birth
+3. Most activitiy occurs near busy transit centers
+4. Bikes can quickly rack up miles and time, and are easy to identify for servicing.  However, those bikes not being used may need servicing too and that is why their usage is so low
+5. There are very clear peaks of usage around commute times as evidence by the "M shaped" graphs on week days - weekend riders peak mid-afternoon and are much lower in numbers. 
+
 
 ## Notes
 ### Data Cleaning and Assumptions
@@ -79,10 +87,20 @@ Any trip duration less than 90 seconds with the same start and stop station was 
 
 Any trip duration greater than 2 hours was removed under the assumption that people would not ride the bikes that far and it could be assumed stolen/unreturned. 
 
-This still left 20884381 rows. I used a random sample of five million point to conduct the analysis and generate the visualizations shown in the Tableau file. All Files are availalble in this repo.
-1. data_prep.ipynb - the jupyter notebook to grab and clean the data
-2. cleaned cleaned_citibike_5M.csv
-3. citibike.twbx
+This still left 20884381 rows. I used a random sample of five million point to conduct the analysis and generate the visualizations shown in the Tableau file. 
+
+Files  availalble in this repo.
+1. data_prep.ipynb - the jupyter notebook to grab, clean and save the data to a .csv file
+2. The tableau story is here https://public.tableau.com/profile/ann.mcnamara#!/vizhome/CitiBike_15936965715370/Analysis2019-2020
+
+## Possible Extentions (Future Work)
+1. Include Jersey City data - some preliminary analysis showed many people availing of the bike sharing program, partictularly close to transit hubs
+2. Include information on available bikes and docks in real time 
+3. Overlay Bike Path Data - I did try this but the files got very big very quick
+4. Connect to live data somehow through Tableau Desktop
+5. Aggregate more data. 
+6. Add flow indicators when to allow the user to select a station and see outgoing and incoming traffic. Include comparison of incoming/outgoing bikes. 
+
 
 ### Copyright
 
